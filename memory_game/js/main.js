@@ -36,10 +36,10 @@ var checkForMatch = function() {
 
 
 var flipCard = function(cardId) {
+	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
 	} 
-	cardsInPlay.push(cards[cardId].rank);
 	console.log("User flipped " + cards[cardId].rank);
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
